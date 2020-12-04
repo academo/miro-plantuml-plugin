@@ -1,0 +1,167 @@
+:root {
+	/* COLORS */
+	--blue100: rgba(244, 246, 255, 1);
+	--blue200: rgba(240, 242, 255, 1);
+	--blue300: rgba(232, 236, 255, 1);
+	--blue400: rgba(217, 224, 255, 1);
+	--blue500: rgba(179, 192, 255, 1);
+	--blue600: rgba(104, 129, 255, 1);
+	--blue700: rgba(66, 98, 255, 1);
+	--blue800: rgba(69, 91, 237, 1);
+	--blue900: rgba(61, 81, 212, 1);
+	--indigo100: rgba(240, 240, 243, 1);
+	--indigo200: rgba(235, 235, 239, 1);
+	--indigo300: rgba(225, 224, 231, 1);
+	--indigo400: rgba(205, 204, 215, 1);
+	--indigo500: rgba(155, 153, 175, 1);
+	--indigo600: rgba(95, 92, 128, 1);
+	--indigo700: rgba(5, 0, 56, 1);
+	--indigoAlpha80: rgba(5, 0, 56, 0.8);
+	--indigoAlpha40: rgba(5, 0, 56, 0.4);
+	--indigoAlpha20: rgba(5, 0, 56, 0.2);
+	--indigoAlpha12: rgba(5, 0, 56, 0.12);
+	--indigoAlpha8: rgba(5, 0, 56, 0.08);
+	--indigoAlpha6: rgba(5, 0, 56, 0.06);
+	--indigoAlpha4: rgba(5, 0, 56, 0.04);
+	--green700: rgba(119, 204, 102, 1);
+	--black: rgba(9, 9, 9, 1);
+	--blackAlpha80: rgba(9, 9, 9, 0.8);
+	--blackAlpha40: rgba(9, 9, 9, 0.4);
+	--white: rgba(255, 255, 255, 1);
+	--red50: rgba(254, 247, 247, 1);
+	--red100: rgba(253, 242, 242, 1);
+	--red400: rgba(247, 212, 212, 1);
+	--red600: rgba(225, 84, 84, 1);
+	--red700: rgba(217, 41, 41, 1);
+	--red800: rgba(199, 20, 20, 1);
+	--red900: rgba(184, 13, 13, 1);
+	--yellow100: rgba(255, 252, 243, 1);
+	--yellow400: rgba(255, 246, 213, 1);
+	--yellow700: rgba(255, 208, 47, 1);
+	--brandBlue700: rgba(63, 83, 217, 1);
+	--brandIndigo700: rgba(5, 0, 56, 1);
+	--brandPink700: rgba(255, 101, 117, 1);
+	--brandLightPink700: rgba(255, 191, 191, 1);
+	--brandYellow700: rgba(255, 208, 47, 1);
+	--whiteAlpha80: rgba(255, 255, 255, 0.8);
+	--whiteAlpha40: rgba(255, 255, 255, 0.4);
+	--whiteAlpha20: rgba(255, 255, 255, 0.2);
+	--indigo50: rgba(245, 245, 247, 1);
+
+	/* TYPOGRAPHY */
+	/* Font family */
+	--header-font: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+		Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	--body-font: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+		Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+	/* Font weight */
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 600;
+	--font-weight-black: 800;
+
+	/* Font sizes */
+	--font-size-small: 12px;
+	--font-size-medium: 14px;
+	--font-size-large: 16px;
+	--font-size-xlarge: 20px;
+	--font-size-xxlarge: 24px;
+	--font-size-xxxlarge: 28px;
+
+	/*Border Radius*/
+	--border-radius-small: 2px;
+	--border-radius-medium: 4px;
+	--border-radius-large: 8px;
+	--border-radius-xlarge: 16px;
+	--border-radius-xxlarge: 32px;
+	--border-radius-circle: 125px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: rgba(5, 0, 56, 1);
+	color: var(--indigo700);
+	background-color: rgba(255, 255, 255, 1);
+	background-color: var(--white);
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI,
+		Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-family: var(--body-font);
+}
+.auth-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.editor-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 10px 10px 10px;
+}
+#editor {
+	border: 1px solid var(--blue500);
+	padding: 2px;
+	flex: 1 1 auto;
+	font-family: "Lucida Console", monospace;
+	overflow: auto;
+	position: relative;
+}
+
+.button {
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid;
+	border-radius: 4px;
+	border-radius: var(--border-radius-medium);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	padding: 14px 24px 16px;
+	min-width: 100px;
+	font-size: 16px;
+	font-size: var(--font-size-large);
+	height: 48px;
+	line-height: 16px;
+}
+.button-primary {
+	color: rgba(255, 255, 255, 1);
+	color: var(--white);
+	border-color: rgba(66, 98, 255, 1);
+	border-color: var(--blue700);
+	background-color: rgba(66, 98, 255, 1);
+	background-color: var(--blue700);
+}
+
+.button-primary:enabled:hover,
+.button-primary:focus {
+	border-color: rgba(69, 91, 237, 1);
+	border-color: var(--blue800);
+	background-color: rgba(69, 91, 237, 1);
+	background-color: var(--blue800);
+}
+
+.button-primary:enabled:active {
+	border-color: rgba(61, 81, 212, 1);
+	border-color: var(--blue900);
+	background-color: rgba(61, 81, 212, 1);
+	background-color: var(--blue900);
+}
+
+.button[disabled] {
+	pointer-events: none;
+	opacity: 0.4;
+	cursor: not-allowed;
+}
