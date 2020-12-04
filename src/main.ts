@@ -1,4 +1,4 @@
-import { APP_ID, miro } from "./constants";
+import { APP_ID, miro, getBaseUrl } from "./constants";
 
 miro.onReady(() => {
 	// eslint-disable-next-line
@@ -11,10 +11,10 @@ miro.onReady(() => {
 				toolbarSvgIcon: iconSvg,
 				onClick: async () => {
 					if (miro.isAuthorized()) {
-						miro.board.ui.openModal("/editor.html?widget=new");
+						miro.board.ui.openModal(getBaseUrl() + "/editor.html?widget=new");
 					} else {
 						miro.showNotification("Not authorized");
-						miro.board.ui.openModal("/auth-banner.html");
+						miro.board.ui.openModal(getBaseUrl() + "/auth-banner.html");
 					}
 				},
 			},
@@ -30,7 +30,9 @@ miro.onReady(() => {
 							tooltip: "Edit PlantUML",
 							svgIcon: iconSvg,
 							onClick: () => {
-								miro.board.ui.openModal("/editor.html?widget=" + widget.id);
+								miro.board.ui.openModal(
+									getBaseUrl() + "/editor.html?widget=" + widget.id
+								);
 							},
 						};
 					}
