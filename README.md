@@ -8,7 +8,7 @@ The diagrams are SVG widgets, you can edit the diagrams by clicking on them and 
 
 You can install this plugin for your team by following this link:
 
-TODO
+[https://miro.com/oauth/authorize/?response_type=token&client_id=3074457351770184441&redirect_uri=https://miro.com/confirm-app-install] Install plugin
 
 # Develop
 
